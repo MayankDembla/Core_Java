@@ -5,6 +5,9 @@ public class MultipleInheritance  {
     public static void main(String[] args) {
 
         ThirdInterface test = new Testing() ;
+        test.getMessage();
+        test.printMessage();
+        test.fun();
 
     }
 }
