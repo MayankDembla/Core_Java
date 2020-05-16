@@ -16,6 +16,9 @@ public class WrapperClass {
 
         System.out.println("Employee 1 : " + emp1) ;
         System.out.println("Employee 2 : " + emp2) ;
+
+        Integer i  = new Integer(9)  ;
+        i = 90 ;
     }
 
     public static void swap(EmployeeWrapper emp1, EmployeeWrapper emp2){
