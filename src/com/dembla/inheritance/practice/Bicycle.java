@@ -42,4 +42,5 @@ public class Bicycle {
                 ", speed=" + speed +
                 '}';
     }
+
 }

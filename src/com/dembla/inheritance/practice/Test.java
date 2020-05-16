@@ -13,6 +13,7 @@ public class Test {
         bike.speedUp(35);
         System.out.println("After Incrementing the Brakes" + bike.getSpeed()) ;
         System.out.println(bike.toString()) ;
+
     }
 
 }
