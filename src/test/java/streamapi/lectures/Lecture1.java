@@ -36,10 +36,10 @@ public class Lecture1 {
         else {
             int count = 0;
             for (Person p : peoplelessthanEighteen) {
-                peoplelessthaneighteenandfirstten.add(p) ;
-                count++ ;
-                if(count >= 10 )
-                    break ;
+                peoplelessthaneighteenandfirstten.add(p);
+                count++;
+                if (count >= 10)
+                    break;
             }
         }
 
@@ -49,15 +49,24 @@ public class Lecture1 {
     @Test
     public void declarativeapproachUsingStream() throws IOException {
 
-        ImmutableList<Person> people = MockData.getPeople() ;
+        ImmutableList<Person> people = MockData.getPeople();
 
         List<Person> youngPeople = people.stream().filter(person -> person.getAge() >= 18).collect(Collectors.toList());
 
         youngPeople.forEach(System.out::println);
 
-        List<Person> young10people = people.stream().filter(person ->  person.getAge() <= 18).limit(10).collect(Collectors.toList());
+        List<Person> young10people = people.stream().filter(person -> person.getAge() <= 18).limit(10).collect(Collectors.toList());
 
         young10people.forEach(System.out::println);
+
+
+        // More Simpler
+
+        MockData.getPeople().stream()
+                            .filter(person -> person.getAge() >= 18)
+                            .limit(10)
+                            .collect(Collectors.toList())
+                            .forEach(System.out::println);
 
     }
 }
