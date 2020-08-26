@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -44,7 +45,11 @@ public class Lecture5 {
 
         final List<PersonDTO> convertedDto = people.stream().map(personPersonDTOFunction).collect(Collectors.toList());
 
+        // Can also use the method reference
+        final Stream<PersonDTO> usingmethodreference = people.stream().map(PersonDTO::map);
+
         convertedDto.forEach(System.out::println);
+        usingmethodreference.forEach(System.out::println);
 
         assertThat(convertedDto).hasSize(1000) ;
 
