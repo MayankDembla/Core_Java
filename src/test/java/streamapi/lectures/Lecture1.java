@@ -10,6 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Imparative and Declarative Approach.
+ */
 public class Lecture1 {
 
     @Test
