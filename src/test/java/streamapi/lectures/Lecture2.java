@@ -8,6 +8,10 @@ import java.io.IOException;
 import java.util.List;
 import java.util.stream.IntStream;
 
+/**
+ * IntStream.range
+ * IntStream.iterate
+ */
 public class Lecture2 {
 
     @Test
