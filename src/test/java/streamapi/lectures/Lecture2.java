@@ -31,12 +31,20 @@ public class Lecture2 {
 
     @Test
     public void rangeIteratingList() throws IOException {
-        List<Person> people = MockData.getPeople() ;
+        List<Person> people = MockData.getPeople();
 
-        IntStream.range(0,people.size()).forEach(index -> {
-            Person person = people.get(index) ;
+        IntStream.range(0, people.size()).forEach(index -> {
+            Person person = people.get(index);
             System.out.println(person);
         });
+    }
+
+    @Test
+    public void intStreamIterate() {
+        IntStream.iterate(0, operand -> operand + 1) // start , function
+                .filter(number -> number % 2 != 0)
+                .limit(10)
+                .forEach(System.out::println);
     }
 
 }
