@@ -17,6 +17,9 @@ import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ *  Filters and Maps
+ */
 public class Lecture5 {
 
     @Test
