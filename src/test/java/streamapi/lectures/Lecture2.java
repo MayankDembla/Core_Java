@@ -1,7 +1,11 @@
 package streamapi.lectures;
 
 import org.junit.Test;
+import streamapi.beans.Person;
+import streamapi.mockdata.MockData;
 
+import java.io.IOException;
+import java.util.List;
 import java.util.stream.IntStream;
 
 public class Lecture2 {
@@ -20,7 +24,19 @@ public class Lecture2 {
 
         System.out.println("Inclusive");
 
-        IntStream.rangeClosed(0, 10).forEach(System.out::println);
+        IntStream.rangeClosed(0, 10).forEach(i -> System.out.println(i));
+
+    }
+
+
+    @Test
+    public void rangeIteratingList() throws IOException {
+        List<Person> people = MockData.getPeople() ;
+
+        IntStream.range(0,people.size()).forEach(index -> {
+            Person person = people.get(index) ;
+            System.out.println(person);
+        });
     }
 
 }
