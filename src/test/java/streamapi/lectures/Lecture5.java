@@ -9,6 +9,7 @@ import streamapi.mockdata.MockData;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.OptionalDouble;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -21,7 +22,7 @@ public class Lecture5 {
     @Test
     public void understandingFilter() throws IOException {
 
-        ImmutableList<Car> cars = MockData.getCars() ;
+        ImmutableList<Car> cars = MockData.getCars();
 
         final Predicate<Car> carPredicate = car -> car.getPrice() < 20000;
 
@@ -51,9 +52,20 @@ public class Lecture5 {
         convertedDto.forEach(System.out::println);
         usingmethodreference.forEach(System.out::println);
 
-        assertThat(convertedDto).hasSize(1000) ;
+        assertThat(convertedDto).hasSize(1000);
 
         System.out.println(convertedDto);
+
+    }
+
+    @Test
+    public void averageCarPrice() throws Exception {
+        ImmutableList<Car> cars = MockData.getCars();
+
+        // calculate average of car prices
+        final OptionalDouble average = cars.stream().mapToDouble(value -> value.getPrice()).average();
+
+        System.out.println(average);
 
     }
 
