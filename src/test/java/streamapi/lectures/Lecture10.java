@@ -29,9 +29,9 @@ public class Lecture10 {
 
         ArrayList<String> list = Lists.newArrayList();
 
-        for (ArrayList<String> l : arrayListOfNames){
-            for(String name : l ){
-                list.add(name) ;
+        for (ArrayList<String> l : arrayListOfNames) {
+            for (String name : l) {
+                list.add(name);
             }
         }
 
@@ -45,4 +45,5 @@ public class Lecture10 {
 
         System.out.println(collect);
     }
+
 }
