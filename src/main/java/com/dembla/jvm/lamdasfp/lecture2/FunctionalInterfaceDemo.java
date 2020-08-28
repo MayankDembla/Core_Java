@@ -20,6 +20,8 @@ public class FunctionalInterfaceDemo {
 
         List<String> documents = new ArrayList<>(Arrays.asList(doc1, doc2, doc3, doc4));
 
+        List<String> targetdocumets = new ArrayList<>() ;
+
         for (String doc : documents) {
 
             // ## 1. For Filtering we are using the predicate
@@ -47,8 +49,10 @@ public class FunctionalInterfaceDemo {
 
                 doc = transformation(doc, combinedfunction);
 
-                System.out.println(doc);
+                targetdocumets.add(doc) ;
             }
+
+            targetdocumets.forEach(d-> System.out.println(d));
 
         }
     }
