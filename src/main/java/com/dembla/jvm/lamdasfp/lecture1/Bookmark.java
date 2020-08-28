@@ -1,4 +1,4 @@
-package com.dembla.jvm.lamdasfp;
+package com.dembla.jvm.lamdasfp.lecture1;
 
 public class Bookmark {
 
