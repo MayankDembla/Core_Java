@@ -1,0 +1,100 @@
+=========================================
+Task/Ticket Status & Support Requirements
+==============================================
+1.Today's Task Details
+1.1 Task/Ticket No:
+	 Ticket on Jira: sprint start tommorow will pick some
+
+1.2 Task/Ticket Status (Completed/ Current/ Future/Cancelled):
+     Task Completed : MFTFSORL-515,380,526,815, 7374
+
+1.3 Task Assigned Date: NA
+
+1.5 Task/Ticket tentative Completion Date: NA
+
+1.6 No. of Days/Hours Required as per Developer & PT Resource for task completion: Harron connected at 09:30 pm to 2:30 pm
+1.7 completion status of the task in percent's: All tickets completed
+
+1.8 PT Developer name who connected and worked for this Task: Harron
+
+1.9 Time Spent by PT Developer on this task today: 5 hr
+
+Tomorrow's requirements :
+2. PT (Part time developer) Support: Yes tibco and Java
+2.1 Task/Ticket No : MFTFSORL-515,526
+2.2 Task/Ticket No Technologies name on which support is required : MFTFSORL-815
+2.3 PT Developer Name (if preferred) from who support required : Any.
+
+Updates:
+3.Task/Ticket Status update:
+3.1. Got new task: Yes, Validate the PCA service.
+
+========================================================
+Call Details : Status Metting, Scrum Call.
+========================================================
+
+Tommorow's Scheduled Call : 09:30 AM EST to 10:00 AM EST
+						    11:00 PM EST to 12:30 PM EST
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TIBCO PT
+
+  After 3 PM
+
+Java Developer
+
+   Will connect when TIBCO PT will disconnect.
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+===============
+Vendor timesheet has been submitted and screenshot has been to timesheetp@gmail.com for WE 06/21
+From p.hary804@gmail.com.
+Total Hr 40Hr
+================
+
+===============
+Client timesheet has been submitted and screenshot has been to timesheetp@gmail.com for WE 06/21
+From p.hary804@gmail.com.
+Total Hr 80Hr
+================
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+=========================================
+Task/Ticket Status & Support Requirements
+==============================================
+1.Today's Task Details
+1.1 Task/Ticket No:
+	 Ticket on Jira: 512 for pca validaTION
+1.2 Task/Ticket tentative Completion Date: Completed today.
+1.6 No. of Days/Hours Required as per Developer & PT Resource for task completion: Haroon connected at 8:10 and disconnected at 11:40 AM   (3.5 hr)
+																				   SEKHAR connected at 12:00 AM IST and disconnected 3:00 AM  (3 hr)
+1.7 completion status of the task in percent's: MFTFSORL-1592 completed today
+1.8 PT Developer name who connected and worked for this Task: TIBCO PT , Java PT
+1.9 Time Spent by PT Developer on this task today:  6.5 hr
+
+Tomorrow's requirements :
+2. PT (Part time developer) Support: Yes
+2.1 Task/Ticket No :MFTFSORL-512
+2.2 Task/Ticket No Technologies name on which support is required : All task completed, fixing issues
+2.3 PT Developer Name (if preferred) from who support required : Any.
+
+
+========================================================
+Call Details : Status Metting, Project Discussion Call.
+========================================================
+
+Tommorow's Scheduled Call : 9:30 AM EST to 10:00 AM EST
+
+
+
+PT to connect :
+
+harron  (for ticket 512 task)
+Monish  (Can Connect from 4-5, validation)
+TIBCO PT.
+
+
