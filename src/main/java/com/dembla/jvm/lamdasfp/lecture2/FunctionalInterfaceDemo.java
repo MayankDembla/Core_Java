@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.function.UnaryOperator;
 
 public class FunctionalInterfaceDemo {
 
@@ -35,8 +36,9 @@ public class FunctionalInterfaceDemo {
 
                 // 2. We can also pass it using the Variable
 
-                Function<String, String> function = d -> Indexer.stripHtmlTags(d);
-                Function<String, String> function2 = d -> Indexer.removeStopTags(d);
+                UnaryOperator<String> function = d -> Indexer.stripHtmlTags(d);
+                UnaryOperator<String> function2 = d -> Indexer.removeStopTags(d);
+
 
                 doc = transformation(doc, function);
                 doc = function2.apply(doc) ;
@@ -51,8 +53,12 @@ public class FunctionalInterfaceDemo {
         return filter.test(doc);
     }
 
+    /*
     static String transformation(String doc, Function<String, String> transformer) {
         return transformer.apply(doc);
+    }*/
+    static String transformation(String doc, UnaryOperator<String> transformer){
+        return transformer.apply(doc) ;
     }
 }
 
