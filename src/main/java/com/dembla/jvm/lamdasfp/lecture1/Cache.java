@@ -150,6 +150,15 @@ public class Cache {
             trick.set(0,temp++) ;
         }).start();
 
+        // Can do this in anonymous or local class ...
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                int countn = 0 ;
+
+            }
+        }).start();
+
     }
 
 }
