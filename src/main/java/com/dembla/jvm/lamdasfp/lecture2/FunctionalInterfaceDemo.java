@@ -23,10 +23,13 @@ public class FunctionalInterfaceDemo {
         for (String doc : documents) {
 
             // ## 1. For Filtering we are using the predicate
-            boolean isTargetDoc = filter(doc, d -> d.contains("stream"));
+//            boolean isTargetDoc = filter(doc, d -> d.contains("stream"));
+
+            // we can use the bifunction as well.
+            BiFunction<String, String , Boolean> biFunction = (d,c) -> d.contains(c) ;
 
             // ## 2. And for transformation we are using the Function
-            if (isTargetDoc) {
+            if (biFunction.apply(doc,"stream")) {
 
                 // 1. Passing Lambda expression in the function parameter
 
@@ -43,7 +46,6 @@ public class FunctionalInterfaceDemo {
                 Function<String, String> combinedfunction = htmlCleaner.andThen(stopwordRemover);
 
                 doc = transformation(doc, combinedfunction);
-
 
                 System.out.println(doc);
             }
