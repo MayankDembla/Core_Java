@@ -1,7 +1,9 @@
 package com.dembla.jvm.lamdasfp.lecture1;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.List;
 
 public class Cache {
 
@@ -106,8 +108,48 @@ public class Cache {
 
     }
 
-    public void go(Test test){
+    int gcount = 0 ;
+
+    public void go(TestNow test){ //(Test test){
         test.apply();
+
+        int count = 0 ;
+
+        // Here also cannot do that if using in lambda
+        // must be effectively final ....
+        // count++ ;
+
+        // Just like anonymous class we can not change the local variable count to count++
+        // this is effectively final -also known as closures.
+        new Thread(() -> System.out.println(count)).start();
+
+        // even we can not do this after as well.
+       // count++ ;
+
+        // this is a compile time error...
+       // new Thread(() -> System.out.println(count++)).start();
+
+        // this is fine
+        new Thread(() -> System.out.println(gcount++)).start();
+
+        gcount++;
+
+        // -------------- trick ---------
+
+        int countn = 0 ;
+
+        List<Integer> trick = new ArrayList<>() ;
+
+        new Thread(()->{
+
+            // we can not shadow the local variable as well
+            // int countn = 0 ;
+
+            trick.add(countn) ;
+            int temp = trick.get(0) ;
+            trick.set(0,temp++) ;
+        }).start();
+
     }
 
 }
