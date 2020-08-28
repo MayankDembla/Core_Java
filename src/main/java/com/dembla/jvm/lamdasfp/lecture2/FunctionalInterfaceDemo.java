@@ -36,12 +36,14 @@ public class FunctionalInterfaceDemo {
 
                 // 2. We can also pass it using the Variable
 
-                UnaryOperator<String> function = d -> Indexer.stripHtmlTags(d);
-                UnaryOperator<String> function2 = d -> Indexer.removeStopTags(d);
+                Function<String,String> htmlCleaner = d -> Indexer.stripHtmlTags(d);
+                Function<String,String> stopwordRemover = d -> Indexer.removeStopTags(d);
 
+                // First htmlcleaner will be applied and then stopwordremover will be applied.
+                Function<String, String> combinedfunction = htmlCleaner.andThen(stopwordRemover);
 
-                doc = transformation(doc, function);
-                doc = function2.apply(doc) ;
+                doc = transformation(doc, combinedfunction);
+
 
                 System.out.println(doc);
             }
@@ -53,13 +55,14 @@ public class FunctionalInterfaceDemo {
         return filter.test(doc);
     }
 
-    /*
+
     static String transformation(String doc, Function<String, String> transformer) {
         return transformer.apply(doc);
-    }*/
+    }
+    /*
     static String transformation(String doc, UnaryOperator<String> transformer){
         return transformer.apply(doc) ;
-    }
+    }*/
 }
 
 
