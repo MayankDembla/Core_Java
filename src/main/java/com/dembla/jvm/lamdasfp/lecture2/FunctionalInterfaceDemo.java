@@ -1,14 +1,12 @@
 package com.dembla.jvm.lamdasfp.lecture2;
 
+import com.sun.xml.internal.stream.StaxErrorReporter;
 import org.htmlcleaner.HtmlCleaner;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.BiFunction;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.UnaryOperator;
+import java.util.function.*;
 
 public class FunctionalInterfaceDemo {
 
@@ -31,7 +29,7 @@ public class FunctionalInterfaceDemo {
             BiFunction<String, String , Boolean> biFunction = (d,c) -> d.contains(c) ;
 
             // ## 2. And for transformation we are using the Function
-            if (biFunction.apply(doc,"stream")) {
+         //   if (biFunction.apply(doc,"stream")) {
 
                 // 1. Passing Lambda expression in the function parameter
 
@@ -50,10 +48,30 @@ public class FunctionalInterfaceDemo {
                 doc = transformation(doc, combinedfunction);
 
                 targetdocumets.add(doc) ;
-            }
+          //  }
 
-            targetdocumets.forEach(d-> System.out.println(d));
+         //   targetdocumets.forEach(d-> System.out.println(d));
 
+
+                try{
+                    if(doc.length() > 80){
+                        throw new Exception("Oversized Document") ;
+                    }
+                } catch (Exception e) {
+                    final String temp = doc ;
+                    print(()->e.getMessage() + " ~ " + temp);
+                }
+
+        }
+
+    }
+
+    // If we put it as false --> no log will be printed ...
+    private static boolean errorflag = true ;
+
+    static void print(Supplier<String> supplier){
+        if(errorflag){
+            System.out.println(supplier.get());
         }
     }
 
